@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/ucon_track.dir/src/NuitrackGL.cpp.o CMakeFiles/ucon_track.dir/src/main.cpp.o  -o ucon_track  -L/home/ucon/ucon_ws/ucon_track/Nuitrack/lib/linux_arm64 -Wl,-rpath,/home/ucon/ucon_ws/ucon_track/Nuitrack/lib/linux_arm64 -lglut -lGL -lnuitrack 

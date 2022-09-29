@@ -333,6 +333,8 @@ void NuitrackGLSample::onSkeletonUpdate(SkeletonData::Ptr userSkeletons)
 	_lines.clear();
 	
 	auto skeletons = userSkeletons->getSkeletons();
+
+	cout<<skeletons<<endl;
 	for (auto skeleton: skeletons)
 	{
 		drawSkeleton(skeleton.joints);
@@ -374,14 +376,14 @@ void NuitrackGLSample::onHandUpdate(HandTrackerData::Ptr handData)
 // Display information about gestures in the console
 void NuitrackGLSample::onNewGesture(GestureData::Ptr gestureData)
 {
-	_userGestures = gestureData->getGestures();
+	_userGestures = gestureData->getGestures(); //
 	for (int i = 0; i < _userGestures.size(); ++i)
 	{
 		printf("type = %d,  userid= %d\n", _userGestures[i].type, _userGestures[i].userId);
 
 		if(_userGestures[i].type == 0){
 
-			 cout<<"0000"<<endl;
+			 cout<<"0000"<<endl;  //
 		}else if(_userGestures[i].type == 1){
  cout<<"1111"<<endl;
 		}

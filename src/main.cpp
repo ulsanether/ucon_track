@@ -4,10 +4,6 @@
 
 NuitrackGLSample sample;
 
-BOOL fullScreen = TRUE;  //전체 화면 
-
-
-
 void closeWindow()
 {
 	sample.release();
@@ -78,7 +74,7 @@ void showHelpInfo()
 int main(int argc, char* argv[])
 {
 	showHelpInfo();
-	
+
 	// Prepare sample to work
 	if (argc < 2)
 		sample.init();
@@ -90,10 +86,13 @@ int main(int argc, char* argv[])
 	// Initialize GLUT window
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-	//glutInitWindowSize(outputMode.xres, outputMode.yres);
-
-	glutCreateWindow(1080,720,"UCON Gesture Sensor",primary, NULL);  //09_29
+	glutInitWindowSize(outputMode.xres, outputMode.yres)
+	glutCreateWindow("UCON Gesture Sensor");  //09_29
 	//glutSetCursor(GLUT_CURSOR_NONE);
+
+
+	GLFWwindow* window; // (후술되는 코드를 보면, 이 변수는 전역(Global)입니다.)
+	window = glfwCreateWindow(1024, 768, "Tutorial 01", NULL, NULL);
 
 	// Connect GLUT callbacks
 	glutKeyboardFunc(keyboard);

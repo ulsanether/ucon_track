@@ -333,8 +333,8 @@ void NuitrackGLSample::onSkeletonUpdate(SkeletonData::Ptr userSkeletons)
 	_lines.clear();
 	
 	auto skeletons = userSkeletons->getSkeletons();
-
-	cout<<skeletons<<endl;
+	cout<<\n<<typeid(skeletons).name()<<' '<<endl;
+	
 	for (auto skeleton: skeletons)
 	{
 		drawSkeleton(skeleton.joints);

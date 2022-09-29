@@ -3,6 +3,10 @@
 
 #include <nuitrack/Nuitrack.h>
 
+
+#include <GestureData.h>  //제스쳐 
+
+
 #ifdef _WIN32
 #include <Windows.h>
 #endif
@@ -14,6 +18,19 @@
 #endif
 
 #include <string>
+
+
+class GestureUcon{
+
+
+public:
+	GestureUcon();
+	~GestureUcon();
+
+purlic
+
+
+}
 
 
 typedef enum

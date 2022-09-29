@@ -4,6 +4,10 @@
 
 NuitrackGLSample sample;
 
+BOOL fullScreen = TRUE;  //전체 화면 
+
+
+
 void closeWindow()
 {
 	sample.release();
@@ -63,7 +67,13 @@ void showHelpInfo()
 {
 	std::cout << "Usage: UCON gesture Sensor [path/to/nuitrack.config]\n"
 				 "Press Esc to close window." << std::endl;
+
+
 }
+
+
+
+
 
 int main(int argc, char* argv[])
 {
@@ -80,8 +90,9 @@ int main(int argc, char* argv[])
 	// Initialize GLUT window
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-	glutInitWindowSize(outputMode.xres, outputMode.yres);
-	glutCreateWindow("UCON Gesture Sensor");
+	//glutInitWindowSize(outputMode.xres, outputMode.yres);
+
+	glutCreateWindow(1080,720,"UCON Gesture Sensor",primary, NULL);  //09_29
 	//glutSetCursor(GLUT_CURSOR_NONE);
 
 	// Connect GLUT callbacks

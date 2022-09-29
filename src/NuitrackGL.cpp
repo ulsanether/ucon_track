@@ -396,6 +396,7 @@ void NuitrackGLSample::drawBone(const Joint& j1, const Joint& j2)
 		_lines.push_back(_height * j1.proj.y);
 		_lines.push_back(_width * j2.proj.x);
 		_lines.push_back(_height * j2.proj.y);
+		printf("1111");
 	}
 }
 

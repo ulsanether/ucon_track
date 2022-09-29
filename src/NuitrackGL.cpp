@@ -333,7 +333,7 @@ void NuitrackGLSample::onSkeletonUpdate(SkeletonData::Ptr userSkeletons)
 	_lines.clear();
 	
 	auto skeletons = userSkeletons->getSkeletons();
-	cout<<' '<<typeid(skeletons).name()<<' '<<endl;
+
 	
 	for (auto skeleton: skeletons)
 	{
@@ -412,6 +412,8 @@ void NuitrackGLSample::drawBone(const Joint& j1, const Joint& j2)
 // Helper function to draw skeleton from Nuitrack data
 void NuitrackGLSample::drawSkeleton(const std::vector<Joint>& joints)
 {
+
+	
 	// We need to draw a bone for every pair of neighbour joints
 	drawBone(joints[JOINT_HEAD], joints[JOINT_NECK]);
 	drawBone(joints[JOINT_NECK], joints[JOINT_LEFT_COLLAR]);
@@ -431,6 +433,8 @@ void NuitrackGLSample::drawSkeleton(const std::vector<Joint>& joints)
 	drawBone(joints[JOINT_LEFT_HIP], joints[JOINT_LEFT_KNEE]);
 	drawBone(joints[JOINT_RIGHT_KNEE], joints[JOINT_RIGHT_ANKLE]);
 	drawBone(joints[JOINT_LEFT_KNEE], joints[JOINT_LEFT_ANKLE]);
+
+	cout<<joints[JOINT_HEAD]<<endl;
 }
 
 // Render prepared background texture

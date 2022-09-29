@@ -90,10 +90,6 @@ int main(int argc, char* argv[])
 	glutCreateWindow("UCON Gesture Sensor");  //09_29
 	//glutSetCursor(GLUT_CURSOR_NONE);
 
-
-	GLFWwindow* window; // (후술되는 코드를 보면, 이 변수는 전역(Global)입니다.)
-	window = glfwCreateWindow(1024, 768, "Tutorial 01", NULL, NULL);
-
 	// Connect GLUT callbacks
 	glutKeyboardFunc(keyboard);
 	glutDisplayFunc(display);

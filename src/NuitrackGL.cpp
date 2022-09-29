@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
-
+using namespace std;
 #if defined(ANDROID) || defined(__ANDROID__)
 #include <android/log.h>
 #define LOGGING(...){__android_log_print(ANDROID_LOG_INFO, "NUITRACK", __VA_ARGS__);}
@@ -381,9 +381,9 @@ void NuitrackGLSample::onNewGesture(GestureData::Ptr gestureData)
 
 		if(_userGestures[i].type == 0){
 
-			 std::cout<<"0000"<<std::endl;
+			 cout<<"0000"<<endl;
 		}else if(_userGestures[i].type == 1){
-printf("000");
+ cout<<"1111"<<endl;
 		}
 	}
 }

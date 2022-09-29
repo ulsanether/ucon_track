@@ -5,8 +5,6 @@
 
 
 
-
-
 #ifdef _WIN32
 #include <Windows.h>
 #endif
@@ -20,17 +18,6 @@
 #include <string>
 
 
-class GestureUcon{
-
-
-public:
-	GestureUcon();
-	~GestureUcon();
-
-purlic
-
-
-}
 
 
 typedef enum

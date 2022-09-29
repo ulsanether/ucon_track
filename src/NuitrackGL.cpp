@@ -405,6 +405,7 @@ void NuitrackGLSample::drawBone(const Joint& j1, const Joint& j2)
 		_lines.push_back(_height * j1.proj.y);
 		_lines.push_back(_width * j2.proj.x);
 		_lines.push_back(_height * j2.proj.y);
+
 		
 	}
 }
@@ -434,7 +435,6 @@ void NuitrackGLSample::drawSkeleton(const std::vector<Joint>& joints)
 	drawBone(joints[JOINT_RIGHT_KNEE], joints[JOINT_RIGHT_ANKLE]);
 	drawBone(joints[JOINT_LEFT_KNEE], joints[JOINT_LEFT_ANKLE]);
 
-	cout<<joints[JOINT_HEAD]<<endl;
 }
 
 // Render prepared background texture

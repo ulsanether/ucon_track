@@ -4,7 +4,7 @@
 #include <nuitrack/Nuitrack.h>
 
 
-#include <GestureData.h>  //제스쳐 
+
 
 
 #ifdef _WIN32

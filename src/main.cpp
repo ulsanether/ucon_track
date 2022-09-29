@@ -63,18 +63,12 @@ void showHelpInfo()
 {
 	std::cout << "Usage: UCON gesture Sensor [path/to/nuitrack.config]\n"
 				 "Press Esc to close window." << std::endl;
-
-
 }
-
-
-
-
 
 int main(int argc, char* argv[])
 {
 	showHelpInfo();
-
+	
 	// Prepare sample to work
 	if (argc < 2)
 		sample.init();
@@ -86,8 +80,8 @@ int main(int argc, char* argv[])
 	// Initialize GLUT window
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-	glutInitWindowSize(outputMode.xres, outputMode.yres)
-	glutCreateWindow("UCON Gesture Sensor");  //09_29
+	glutInitWindowSize(outputMode.xres, outputMode.yres);
+	glutCreateWindow("UCON Gesture Sensor");
 	//glutSetCursor(GLUT_CURSOR_NONE);
 
 	// Connect GLUT callbacks

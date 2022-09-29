@@ -377,7 +377,14 @@ void NuitrackGLSample::onNewGesture(GestureData::Ptr gestureData)
 	_userGestures = gestureData->getGestures();
 	for (int i = 0; i < _userGestures.size(); ++i)
 	{
-		printf("Recognized %d from %d\n", _userGestures[i].type, _userGestures[i].userId);
+		printf("type = %d,  userid= %d\n", _userGestures[i].type, _userGestures[i].userId);
+
+		if(_userGestures[i].type == 0){
+
+			 std::cout<<"0000"<<std::endl;
+		}else if(_userGestures[i].type == 1){
+printf("000");
+		}
 	}
 }
 
@@ -396,7 +403,7 @@ void NuitrackGLSample::drawBone(const Joint& j1, const Joint& j2)
 		_lines.push_back(_height * j1.proj.y);
 		_lines.push_back(_width * j2.proj.x);
 		_lines.push_back(_height * j2.proj.y);
-		printf("1111");
+		
 	}
 }
 

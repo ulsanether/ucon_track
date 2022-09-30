@@ -29,6 +29,9 @@ typedef enum
 
 
 
+void count_danger();
+
+
 // Main class of the sample
 class NuitrackGLSample final
 {

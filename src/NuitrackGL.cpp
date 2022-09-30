@@ -363,7 +363,7 @@ void NuitrackGLSample::onHandUpdate(HandTrackerData::Ptr handData) {
     }
 }
 
-int gesture_count_0 = 0;
+int gesture_count = 0;
 //int gesture_count_1 = 0;
 // Display information about gestures in the console
 void NuitrackGLSample::onNewGesture(GestureData::Ptr gestureData) {
@@ -375,7 +375,7 @@ void NuitrackGLSample::onNewGesture(GestureData::Ptr gestureData) {
 			
 			cout << "0000" << endl; //
 		} else if (_userGestures[i].type != 0) {
-			gesture_count_0 = 0;
+			gesture_count = 0;
 		}
 		}
 

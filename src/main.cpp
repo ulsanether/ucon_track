@@ -2,6 +2,10 @@
 #include <GL/freeglut.h>
 #include <iostream>
 
+
+
+
+
 NuitrackGLSample sample;
 
 void closeWindow()

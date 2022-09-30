@@ -1,5 +1,9 @@
 #include "NuitrackGL.h"
 
+#include "stdafx.h"
+#include "includePython.h"
+
+
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
@@ -389,8 +393,22 @@ void NuitrackGLSample::onNewGesture(GestureData::Ptr gestureData) {
 void count_danger() {
 
 printf("위험 신호 파이썬 보냄");
+PyObject* pArgs;
+double dVal1 = 1;
+double dVal2 = 2;
+Py_Initialize();
+PyRun_SimpleString(“import sys”);
+PyRun_SimpleString(“sys.path.append(r’\\_python’)”);
+pArgs = PyTuple_New(2);
+PyTuple_SetItem(pArgs, 0, PyLong_FromLong(dVal1));
+PyTuple_SetItem(pArgs, 1, PyLong_FromLong(dVal2));
+pModule = PyImport_Import("main.py"); // 생성한 PyObject pName을 import한다.
+pFunc = PyObject_GetAttrString(pModule, “count_danger”); // 실행할 함수인 plus를 PyObject에 전달한다.
+pValue = PyObject_CallObject(pFunc, pArgs); // pFunc에 매개변수를 전달해서 실행한다.
+Py_Finalize();
 
-
+double dVal3 = PyLong_AsLong(pValue); // pFunc의 결과를 변수에 할당한다
+std::cout << dVal3 << endl; // 받아온 변수값을 출력한다
 
 }
 

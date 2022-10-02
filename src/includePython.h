@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2c090e6489200127de4fe14407bc952fe0f8cee877ea9277d25a05952fd291ce
-size 173
+#pragma once
+//includePython.h
+#ifdef _DEBUG
+#define _DEBUG_WAS_DEFINED 1
+#undef _DEBUG
+#endif
+#include <Python.h>
+#ifdef _DEBUG_WAS_DEFINED
+#define _DEBUG 1
+#endif
